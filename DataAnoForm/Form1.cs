@@ -21,7 +21,9 @@ namespace DataAnoForm
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime datan = dateTimePicker1.Value;
-            TimeSpan dias = (DateTime.Today).Subtract(datan);
+            TimeSpan dias = (DateTime.Today).Subtract(datan);               //Peguei a dia e não a data, porque
+                                                                            //a data de aniversário é o dia em 
+                                                                            //que nascemos
             double diastotal = dias.Days+2;
             label1.Text = Math.Floor(diastotal / 365.2425).ToString();
         }
